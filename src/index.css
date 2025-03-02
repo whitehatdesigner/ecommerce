@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+/* 
+@font-face {
+    font-family: "prata", sans-serif;
+    src: url(./assets/fonts/Prata/Prata-Regular.ttf);
+} */
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1260px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 48px;
+    font-family: "Prata", serif;
+    @media (max-width:768px) {
+        font-size: 36px;
+    }
+}

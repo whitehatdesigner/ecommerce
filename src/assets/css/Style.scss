@@ -1,0 +1,200 @@
+header {
+    padding: 20px 0px;
+
+    .logo-box {
+        img {
+            width: 200px;
+        }
+    }
+
+    .primary-menu {
+        a {
+            font-size: 18px;
+            letter-spacing: 1px;
+            padding: 8px 10px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                content: '';
+                width: 0%;
+                left: 0;
+                height: 1px;
+                background-color: #000;
+                transition: all .3s linear;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        a.active-menu {
+            &::after {
+                position: absolute;
+                bottom: 0;
+                content: '';
+                width: 100%;
+                left: 0;
+                height: 1px;
+                background-color: #000;
+                transition: all .3s linear;
+            }
+        }
+
+    }
+
+    .user {
+        position: relative;
+
+        img {
+            width: 22px;
+        }
+
+        .cart-icon {
+            position: relative;
+
+            .cart-count {
+                position: absolute;
+                bottom: -14px;
+                right: -10px;
+                background-color: #000;
+                color: #fff;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .menu-icon {
+        display: none;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .back-menu {
+        display: none;
+        align-items: center;
+    }
+
+    @media (max-width:992px) {
+        .menu-icon {
+            display: block;
+        }
+
+        .back-menu {
+            display: flex;
+        }
+
+        .primary-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+            transition: all .3s ease-in-out;
+
+            ul {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 40px;
+            }
+        }
+
+        .active-menu{
+            right: 0%;
+        }
+    }
+
+    @media (max-width:768px) {
+        .logo-box {
+            img {
+                width: 140px;
+            }
+        }
+        .primary-menu{
+            width: 100%;
+        }
+    }
+}
+
+
+// ========== Hero Section ========
+
+.hero-section{
+    .main-hero-section{
+        display: flex;
+        border: 1px solid #222;
+        .hero-content{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .first-tagline{
+                text-transform: uppercase;
+                font-size: 20px;
+                position: relative;
+                padding-left: 10px;
+                display: block;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    width: 50px;
+                    height: 2px;
+                    background: #000;
+                }
+            }
+            .secound-tagline{
+                text-transform: uppercase;
+                font-size: 20px;
+                position: relative;
+                padding-left: 10px;
+                display: inline-block;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    width: 50px;
+                    height: 2px;
+                    background: #000;
+                }
+            }
+
+        }
+        .hero-images{
+            width: 50%;
+        }
+    }
+    @media (max-width:992px) {
+        .main-hero-section{
+           flex-direction: column;
+           border: none;
+           .hero-content{
+            width: 100%;
+            padding: 40px 15px;
+           }
+           .hero-images{
+            width: 100%;
+           }
+        }
+    }
+}
