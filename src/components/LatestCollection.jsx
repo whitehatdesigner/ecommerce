@@ -3,10 +3,10 @@ import { ShopContext } from '../context/shopContext';
 
 const LatestCollection = () => {
 
-    const { products } = useContext(ShopContext);
+    const  products  = useContext(ShopContext);
 
-    console.log(products);
-  return (
+    console.log("hii",products);
+  return (          
     <div>
         
     </div>

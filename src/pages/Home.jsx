@@ -3,13 +3,18 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
+import LatestCollection from '../components/LatestCollection';
+import ShopContextProvider from '../context/shopContext';
+
 const Home = () => {
   const location = useLocation();
   return (
     <div>
-            <Header/>
-            {location.pathname === "/" ? <Mainpage/> : <Outlet/> }
-            <Footer/>
+      <ShopContextProvider>
+          <Header />
+          {location.pathname === "/" ? <Mainpage /> : <Outlet />}
+          <Footer />
+      </ShopContextProvider>
     </div>
   )
 }
@@ -18,7 +23,8 @@ const Home = () => {
 const Mainpage = () => {
   return (
     <>
-    <HeroSection/>
+      <HeroSection />
+      <LatestCollection />
     </>
   )
 }
