@@ -19,7 +19,7 @@ const BestSaller = () => {
         
 
   return (
-    <div className='section-padding best-saller'>
+    <div className='best-saller'>
       <div className="container">
         <div className="text-center">
           <SectionTitle SectionTitle1={'Best'} SectionTitle2={'Saller'} />

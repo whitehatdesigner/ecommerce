@@ -7,6 +7,7 @@ import LatestCollection from '../components/LatestCollection';
 import ShopContextProvider from '../context/shopContext';
 import BestSaller from '../components/BestSaller';
 import OurPolicy from '../components/OurPolicy';
+import NewsLatter from '../components/NewsLatter';
 
 const Home = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ const Mainpage = () => {
       <LatestCollection />
       <BestSaller/>
       <OurPolicy/>
+      <NewsLatter/>
     </>
   )
 }
