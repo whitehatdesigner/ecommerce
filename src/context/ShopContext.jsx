@@ -1,23 +1,22 @@
 import { createContext, useState } from "react";
-import { ShopProducts } from "../assets/ShopProducts";
+import { ShopProducts } from "../assets/ShopProducts"; // Ensure this path is correct
+
 export const ShopContext = createContext();
 
-const ShopContextProvider = (props) => {
-
-    const [currency, SetCurrency] = useState("$");
-
-    const [deliveryFee, SetDeliveryFee] = useState(10);
+// Use a named function component instead of an arrow function
+function ShopContextProvider({ children }) {
+    const [currency, setCurrency] = useState("$");
+    const [deliveryFee, setDeliveryFee] = useState(10);
 
     const value = {
-        ShopProducts, currency, SetCurrency, deliveryFee, SetDeliveryFee
-    }
+        ShopProducts, currency, setCurrency, deliveryFee, setDeliveryFee
+    };
 
     return (
         <ShopContext.Provider value={value}>
-            {props.children}
+            {children}
         </ShopContext.Provider>
-    )
+    );
 }
-
 
 export default ShopContextProvider;

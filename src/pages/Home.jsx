@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import LatestCollection from '../components/LatestCollection';
 import ShopContextProvider from '../context/shopContext';
+import BestSaller from '../components/BestSaller';
+import OurPolicy from '../components/OurPolicy';
 
 const Home = () => {
   const location = useLocation();
@@ -25,6 +27,8 @@ const Mainpage = () => {
     <>
       <HeroSection />
       <LatestCollection />
+      <BestSaller/>
+      <OurPolicy/>
     </>
   )
 }

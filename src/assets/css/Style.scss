@@ -115,7 +115,7 @@ header {
             }
         }
 
-        .active-menu{
+        .active-menu {
             right: 0%;
         }
     }
@@ -126,7 +126,8 @@ header {
                 width: 140px;
             }
         }
-        .primary-menu{
+
+        .primary-menu {
             width: 100%;
         }
     }
@@ -135,24 +136,26 @@ header {
 
 // ========== Hero Section ========
 
-.hero-section{
-    .main-hero-section{
+.hero-section {
+    .main-hero-section {
         display: flex;
         border: 1px solid #222;
-        .hero-content{
+
+        .hero-content {
             width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .first-tagline{
+            .first-tagline {
                 text-transform: uppercase;
                 font-size: 20px;
                 position: relative;
                 padding-left: 10px;
                 display: block;
-                &::before{
+
+                &::before {
                     content: '';
                     position: absolute;
                     top: 50%;
@@ -162,13 +165,15 @@ header {
                     background: #000;
                 }
             }
-            .secound-tagline{
+
+            .secound-tagline {
                 text-transform: uppercase;
                 font-size: 20px;
                 position: relative;
                 padding-left: 10px;
                 display: inline-block;
-                &::before{
+
+                &::before {
                     content: '';
                     position: absolute;
                     top: 50%;
@@ -180,21 +185,95 @@ header {
             }
 
         }
-        .hero-images{
+
+        .hero-images {
             width: 50%;
         }
     }
+
     @media (max-width:992px) {
-        .main-hero-section{
-           flex-direction: column;
-           border: none;
-           .hero-content{
-            width: 100%;
-            padding: 40px 15px;
-           }
-           .hero-images{
-            width: 100%;
-           }
+        .main-hero-section {
+            flex-direction: column;
+            border: none;
+
+            .hero-content {
+                width: 100%;
+                padding: 40px 15px;
+            }
+
+            .hero-images {
+                width: 100%;
+            }
         }
+    }
+}
+
+// ============ section heading ==========
+.section-heading {
+    h2 {
+        color: #000;
+        position: relative;
+        display: inline-block;
+        padding-right: 10px;
+
+        span {
+            color: #4c4c4c;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 70px;
+            height: 2px;
+            background: #000;
+        }
+    }
+}
+
+
+.product-card {
+    .img-box {
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            transition: all .2s linear;
+        }
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .content-box {
+        padding: 10px;
+    }
+}
+
+// ============ Latest collection ==========
+
+.latest-section {
+    .latestProducts-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+        margin-top: 40px;
+    }
+}
+
+
+// ============= Best Saller ==========
+
+.best-saller{
+    .bestsallerProducts-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+        margin-top: 40px;
     }
 }
