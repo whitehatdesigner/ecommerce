@@ -388,3 +388,91 @@ footer{
         border-top: 1px solid #ccc;
     }
 }
+
+
+// ========== collection-page ==========
+
+.collection-page{
+    .collection-warapp{
+        display: flex;
+        gap: 40px;
+        .filter-bar{
+            width: 20%;
+            .filter-bar-style{
+                position: sticky;
+                top: 30px;
+            }
+            .filter-icon{
+                display: none;
+                width: 10px;
+                height: max-content;
+            }
+            .filter-box{
+                margin-top: 20px;   
+                padding: 15px;
+                border: 1px solid #ccc;
+                p{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li{
+                        display: flex;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+        
+        .collection-side-bar{
+            width: 80%;
+            .collection-heading{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .product-short{
+                    border: 1px solid #ccc;
+                    padding: 5px;
+                }
+            }
+            .collection-products{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-gap: 20px;
+                align-items: stretch;
+                margin-top: 40px;
+                @media (max-width:768px) {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                }
+            }
+        }
+
+        @media (max-width:1024px) {
+            flex-direction: column;
+            gap: 40px;
+
+            .filter-bar{
+                width: 100%;
+                .filter-icon{
+                    display: block;
+                }
+                h4{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .filter-hide{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+// ========= collection ======
+
