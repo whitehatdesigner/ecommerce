@@ -7,9 +7,12 @@ export const ShopContext = createContext();
 function ShopContextProvider({ children }) {
     const [currency, setCurrency] = useState("$");
     const [deliveryFee, setDeliveryFee] = useState(10);
+    const [search, setSearch] = useState('');
+    const [showSearch, setShowSearch] = useState('true');
+
 
     const value = {
-        ShopProducts, currency, setCurrency, deliveryFee, setDeliveryFee
+        ShopProducts, currency, setCurrency, deliveryFee, setDeliveryFee, search, setSearch, showSearch, setShowSearch
     };
 
     return (
