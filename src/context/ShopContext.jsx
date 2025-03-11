@@ -3,16 +3,15 @@ import { ShopProducts } from "../assets/ShopProducts"; // Ensure this path is co
 
 export const ShopContext = createContext();
 
-// Use a named function component instead of an arrow function
 function ShopContextProvider({ children }) {
     const [currency, setCurrency] = useState("$");
     const [deliveryFee, setDeliveryFee] = useState(10);
     const [search, setSearch] = useState('');
-    const [showSearch, setShowSearch] = useState('true');
-
+    const [showSearch, setShowSearch] = useState(false);
+    const [products, setProducts] = useState(ShopProducts);
 
     const value = {
-        ShopProducts, currency, setCurrency, deliveryFee, setDeliveryFee, search, setSearch, showSearch, setShowSearch
+        products, ShopProducts, currency, setCurrency, deliveryFee, setDeliveryFee, search, setSearch, showSearch, setShowSearch
     };
 
     return (

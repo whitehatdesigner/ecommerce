@@ -9,7 +9,9 @@ import Login from './pages/Login';
 import Orders from './pages/Orders';
 import PlaceOrder from './pages/PlaceOrder';
 import Products from './pages/Products';
+
 import { RouterProvider } from 'react-router-dom';
+import ProductDetails from './components/ProductDetails';
 
 const router = createBrowserRouter(
   [
@@ -48,6 +50,10 @@ const router = createBrowserRouter(
         {
           path: "/products",
           element: <Products/>
+        },
+        {
+          path: "/product/:product_id",
+          element: <ProductDetails/>
         },
       ]
     }

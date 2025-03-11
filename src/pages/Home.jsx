@@ -8,6 +8,7 @@ import ShopContextProvider from '../context/shopContext';
 import BestSaller from '../components/BestSaller';
 import OurPolicy from '../components/OurPolicy';
 import NewsLatter from '../components/NewsLatter';
+import SearchBar from '../components/SearchBar';
 
 const Home = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const Home = () => {
     <div>
       <ShopContextProvider>
           <Header />
+          <SearchBar/>
           {location.pathname === "/" ? <Mainpage /> : <Outlet />}
           <Footer />
       </ShopContextProvider>

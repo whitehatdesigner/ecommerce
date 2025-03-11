@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../assets/Images/import-images'
 import { Link, NavLink } from 'react-router-dom'
 import { MdArrowBackIos } from 'react-icons/md'
+import { ShopContext } from '../context/shopContext'
 
 
 const Header = () => {
 
   const [showmenu, Setshowmenu] = useState(false);
+   const { showSearch, setShowSearch } = useContext(ShopContext)
 
   return (
     <header>
@@ -41,7 +43,7 @@ const Header = () => {
 
         <div className="user flex items-center gap-5">
           <div className="search-icon">
-            <img src={assets.search_icon} alt="Search Icon" />
+            <img src={assets.search_icon} alt="Search Icon" onClick={()=> setShowSearch(true)} />
           </div>
           <div className="user-icon">
             <img src={assets.profile_icon} alt="Profile Icon" />

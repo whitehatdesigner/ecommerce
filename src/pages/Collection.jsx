@@ -5,13 +5,15 @@ import { ShopContext } from '../context/shopContext';
 import ProductsCard from '../components/ProductsCard';
 
 const Collection = () => {
-  const products = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategories] = useState([]);
   const [subCategories, setSubCategories] = useState([]);
   const [shortProduct, setShortProduct] = useState('relevent' || [])
 
+  console.log(search);
+  
   const toggleCategories = (e) => {
     if (category.includes(e.target.value)) {
       setCategories((prev) => prev.filter((item) => item !== e.target.value));
@@ -29,7 +31,12 @@ const Collection = () => {
   };
 
   const applyFilter = () => {
-    let productCopy = products?.ShopProducts?.slice() || [];
+    let productCopy = products.slice() || [];
+
+    if(showSearch && search){
+      productCopy = productCopy.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
+    }
+
 
     if (category.length > 0) {
       productCopy = productCopy.filter((item) => category.includes(item.category));
@@ -59,18 +66,17 @@ const Collection = () => {
       }
     }
 
-    useEffect(() => {
-      shortProducts();
-    }, [shortProduct])
-
   useEffect(() => {
     applyFilter();
-  }, [subCategories, category, products?.ShopProducts]);
+  }, [subCategories, category, products, search, showSearch]);
 
   useEffect(() => {
-    setFilterProducts(products?.ShopProducts || []);
-  }, [products?.ShopProducts]);
+    setFilterProducts(products);
+  }, [products]);
 
+  useEffect(() => {
+    shortProducts();
+  }, [shortProduct])
 
 
   return (

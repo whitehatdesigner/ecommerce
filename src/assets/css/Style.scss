@@ -50,6 +50,7 @@ header {
 
         img {
             width: 22px;
+            cursor: pointer;
         }
 
         .cart-icon {
@@ -474,5 +475,159 @@ footer{
 }
 
 
-// ========= collection ======
+// ========= Search box ======
 
+
+.showSearch-section{
+    padding: 40px 0px;
+    .main-showSearch-section{
+        display: flex;
+        align-items: center;
+        .search-box{
+            width: 70%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            padding: 0px 15px;
+            input{
+                width: 100%;
+            padding: 10px 0px;
+                &:focus{
+                    border: none;
+                }
+            }
+            img{
+                width: 25px;
+            }
+  
+        }
+        .close-icon{
+            cursor: pointer;
+            display: inline-block;
+        }
+    }
+}
+
+
+// =================== product-details ==========
+.product-details{
+    .main-product-details{
+        display: flex;
+        gap: 40px;
+        .img-box{
+            width: 50%;
+            display: flex;
+            gap: 20px;
+            .multipal-img{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 100%;
+                overflow-x: auto;
+            }
+            .single-img{
+                width: 80%;
+                display: flex;
+            }
+            img{
+                object-fit: cover;
+            }
+        }
+        .content-box{
+            width: 50%;
+            h1{
+                font-size: 26px;
+            }
+            .star-icon{
+                margin-top: 10px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+                p{
+                    font-size: 20px;
+                    // display: flex;
+                    line-height: normal;
+                }
+            }
+            .product-price{
+                font-size: 28px;
+                font-weight: 500;
+                margin: 30px 0;
+            }
+            .product-description{
+                color: #4c4c4c;
+                line-height: 1.7;
+            }
+            .product-size{
+                margin: 40px 0;
+                .sizes{
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    button{
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        background: #ededed;
+                    }
+                }
+            }
+
+            .cart-btn{
+                padding: 14px 30px;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .product-feature{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                p{
+                    color: #4c4c4c;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .description-box{
+        padding: 70px 0 0;
+        .description-review{
+            display: flex;
+            button{
+                padding: 12px 25px;
+                border: 1px solid #ccc;
+            }
+        }
+        .d-r-content-box{
+            border: 1px solid #ccc;
+            padding: 30px 20px;
+        }
+    }
+}
+
+.relatedProducts{
+    padding-top: 60px;
+
+    .main-relatedProduct{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+        margin-top: 40px;
+        @media (max-width:768px) {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+}
