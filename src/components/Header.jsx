@@ -2,13 +2,13 @@ import React, { useContext, useState } from 'react'
 import { assets } from '../assets/Images/import-images'
 import { Link, NavLink } from 'react-router-dom'
 import { MdArrowBackIos } from 'react-icons/md'
-import { ShopContext } from '../context/shopContext'
+import { ShopContext } from '../context/ShopContext'
 
 
 const Header = () => {
 
   const [showmenu, Setshowmenu] = useState(false);
-   const { showSearch, setShowSearch } = useContext(ShopContext)
+   const { showSearch, setShowSearch, getCartCount } = useContext(ShopContext)
 
   return (
     <header>
@@ -52,7 +52,7 @@ const Header = () => {
             <Link to={'/cart'}>
               <img src={assets.cart_icon} alt="Cart Icon" />
                 <span className='cart-count'>
-                    0
+                    {getCartCount()}
                 </span>
             </Link>
           </div>

@@ -9,12 +9,15 @@ import BestSaller from '../components/BestSaller';
 import OurPolicy from '../components/OurPolicy';
 import NewsLatter from '../components/NewsLatter';
 import SearchBar from '../components/SearchBar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const Home = () => {
   const location = useLocation();
   return (
     <div>
       <ShopContextProvider>
+        <ToastContainer/>
           <Header />
           <SearchBar/>
           {location.pathname === "/" ? <Mainpage /> : <Outlet />}

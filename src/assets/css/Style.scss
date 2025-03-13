@@ -631,3 +631,23 @@ footer{
         }
     }
 }
+
+.cart-page{
+    .main-cart-page{
+        margin-top: 40px;
+        .items{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+            .item-img{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
