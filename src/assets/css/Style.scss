@@ -392,7 +392,7 @@ footer{
         font-size: 14px;
     }
     .main-footer{
-        // margin-top: 150px;
+        margin-top: 100px;
         padding-bottom: 30px;
         display: flex;
         justify-content: space-between;
@@ -800,6 +800,12 @@ form{
         .box{
             width: 50%;
         }
+        @media (max-width:500px) {
+          flex-direction: column;
+          .box{
+            width: 100%;
+          }  
+        }
     }
 }
 
@@ -830,6 +836,16 @@ form{
                 }
             }
         }
+        @media (max-width:992px) {
+            flex-direction: column;
+            gap: 20px;
+            .form-box{
+                width: 100%;
+            }
+            .payment-details{
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -845,6 +861,7 @@ form{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
             .product-details{
                 display: flex;
                 gap: 20px;
@@ -881,6 +898,9 @@ form{
                     cursor: pointer;
                 }
             }
+        }
+        @media (max-width:768px) {
+            width: 100%;
         }
     }
 }
