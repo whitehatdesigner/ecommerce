@@ -164,6 +164,9 @@ header {
                     width: 50px;
                     height: 2px;
                     background: #000;
+                    @media (max-width:500px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -182,9 +185,12 @@ header {
                     width: 50px;
                     height: 2px;
                     background: #000;
+                    @media (max-width:500px) {
+                        display: none;
+                    }
                 }
             }
-
+          
         }
 
         .hero-images {
@@ -204,6 +210,14 @@ header {
 
             .hero-images {
                 width: 100%;
+            }
+        }
+    }
+    @media (max-width:500px) {
+        .main-hero-section {
+            .hero-content {
+                align-items: self-start;
+                padding: 25px 0px;
             }
         }
     }
@@ -229,6 +243,9 @@ header {
             width: 70px;
             height: 2px;
             background: #000;
+            @media (max-width:500px) {
+                display: none;
+            }
         }
     }
 }
@@ -253,6 +270,9 @@ header {
         padding: 10px;
         h4{
             font-size: 16px;
+            @media (max-width:500px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -269,6 +289,11 @@ header {
         @media (max-width:768px) {
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
+            gap: 10px;
+            margin-top: 20px;
+        }
     }
 }
 
@@ -284,6 +309,11 @@ header {
         margin-top: 40px;
         @media (max-width:768px) {
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
+            gap: 10px;
+            margin-top: 20px;
         }
     }
 }
@@ -313,6 +343,9 @@ header {
                 color: #4c4c4c;
             }
            }
+        }
+        @media (max-width:768px) {
+            gap: 20px;
         }
     }
 }
@@ -359,7 +392,7 @@ footer{
         font-size: 14px;
     }
     .main-footer{
-        margin-top: 150px;
+        // margin-top: 150px;
         padding-bottom: 30px;
         display: flex;
         justify-content: space-between;
@@ -449,12 +482,16 @@ footer{
                 @media (max-width:768px) {
                     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 }
+                @media (max-width:500px) {
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 10px;
+                }
             }
         }
 
         @media (max-width:1024px) {
             flex-direction: column;
-            gap: 40px;
+            gap: 20px;
 
             .filter-bar{
                 width: 100%;
@@ -468,6 +505,18 @@ footer{
                 }
                 .filter-hide{
                     display: none;
+                }
+            }
+            .collection-side-bar{
+                width: 100%;
+            }
+        }
+
+        @media (max-width:768px) {
+            .collection-side-bar{
+                .collection-heading{
+                    flex-direction: column;
+                    align-items: self-start;
                 }
             }
         }
@@ -599,6 +648,32 @@ footer{
                 }
             }
         }
+        @media (max-width:1050px) {
+            flex-direction: column;
+            .content-box{
+                width: 100%;
+            }
+        }
+        @media (max-width:768px) {
+            .img-box{
+                width: 100%;
+            }
+        }
+        @media (max-width:768px) {
+            .img-box{
+               flex-direction: column-reverse;
+               .single-img{
+                width: 100%;
+               }
+                .multipal-img{
+                    width: 100%;
+                    flex-direction: row;
+                    img{
+                        width: 100px;
+                    }
+               }
+            }
+        }
     }
     
     .description-box{
@@ -622,12 +697,15 @@ footer{
 
     .main-relatedProduct{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-gap: 20px;
         align-items: stretch;
         margin-top: 40px;
         @media (max-width:768px) {
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         }
     }
 }
@@ -638,6 +716,7 @@ footer{
         .items{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
             padding: 20px;
             border-top: 1px solid #ccc;
@@ -646,6 +725,160 @@ footer{
                     width: 100px;
                     height: 100px;
                     object-fit: cover;
+                }
+            }
+            .item-name{
+                .product-size{
+                    width: 30px;
+                    height: 30px;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #e6e6e6;
+                }
+            }
+            .quntity{
+                input{
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    width: 100px;
+                }
+            }
+            .delete-icon{
+                img{
+                    width: 30px;
+                    cursor: pointer;
+                }
+            }
+            @media (max-width:600px) {
+                flex-wrap: wrap;
+                .delete-icon{
+                    img{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.cart-value{
+    width: 500px;
+    margin: 50px 0 0 auto;
+    @media (max-width:768px) {
+        width: 100%;
+    }
+}
+
+.cart-total{
+    h4{
+        margin-bottom: 20px;
+    }
+    p{
+        padding: 15px 10px;
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// ============ place Order ===========
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input{
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+    .group-box{
+        display: flex;
+        gap: 20px;
+
+        .box{
+            width: 50%;
+        }
+    }
+}
+
+.order-place{
+    .main-order-place{
+        margin-top: 30px;
+        display: flex;
+        gap: 50px;
+        .form-box{
+            width: 50%;
+        }
+        .payment-details{
+            width: 50%;
+            .payment-method{
+                margin-top: 30px;
+            }
+            .multi-payments{
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+                .box{
+                    label{
+                        display: flex;
+                        padding: 10px;
+                        gap: 10px;
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.my-orders{
+    .main-my-order{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+        .items{
+            padding: 20px 0 0;
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .product-details{
+                display: flex;
+                gap: 20px;
+                img{
+                    width: 100px;
+                }
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.login-form{
+    .main-login-form{
+        width: 60%;
+        margin: 0 auto;
+        h3{
+            text-align: center;
+        }
+        .login-inputs{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .login-other{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    cursor: pointer;
                 }
             }
         }

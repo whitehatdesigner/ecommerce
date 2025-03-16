@@ -46,7 +46,7 @@ const Header = () => {
             <img src={assets.search_icon} alt="Search Icon" onClick={()=> setShowSearch(true)} />
           </div>
           <div className="user-icon">
-            <img src={assets.profile_icon} alt="Profile Icon" />
+            <Link to={'/login'}><img src={assets.profile_icon} alt="Profile Icon" /></Link>
           </div>
           <div className="cart-icon">
             <Link to={'/cart'}>
