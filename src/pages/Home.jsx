@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import LatestCollection from '../components/LatestCollection';
-import ShopContextProvider from '../context/shopContext';
+import ShopContextProvider from '../context/ShopContext';
 import BestSaller from '../components/BestSaller';
 import OurPolicy from '../components/OurPolicy';
 import NewsLatter from '../components/NewsLatter';
