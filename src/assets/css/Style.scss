@@ -832,7 +832,22 @@ form{
                         padding: 10px;
                         gap: 10px;
                         border: 1px solid #ccc;
+                        img{
+                            width: 100%;
+                        }
                     }
+                }
+
+                @media (max-width:600px) {
+                    flex-direction: column;
+                    .box{
+                        label{
+                            img{
+                                width: 100px;
+                            }
+                        }
+                    }
+  
                 }
             }
         }

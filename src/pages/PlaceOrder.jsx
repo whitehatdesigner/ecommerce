@@ -75,7 +75,7 @@ const PlaceOrder = () => {
                 <div className="box">
                   <label>
                     <input type="radio" name='payment' />
-                    <img src={assets.stripe_logo} alt="" />
+                    Cash on Delivery
                   </label>
                 </div>
               </div>
