@@ -35,7 +35,7 @@ const Mainpage = () => {
       <LatestCollection />
       <BestSaller/>
       <OurPolicy/>
-      <NewsLatter/>
+      {/* <NewsLatter/> */}
     </>
   )
 }
